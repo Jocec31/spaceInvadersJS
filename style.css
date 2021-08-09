@@ -1,0 +1,88 @@
+*,
+::before,
+::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	height: 100vh;
+	background-color: #f1f1f1;
+}
+h3 {
+	text-align: center;
+	margin: 2em 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+/* STYLE DIV GRID */
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	width: 505px;
+	height: 505px;
+	margin: auto;
+	border: 2px solid #333;
+	box-shadow: 0 1px 10px #333;
+	background-image: url("./ressources/background-black.png");
+	animation: background-moving 5s linear infinite;
+}
+
+/* animation pour faire défiler le fonds étoilé */
+@keyframes background-moving {
+	from {
+		background-position-y: 0;
+	}
+	to {
+		/* 256px = la taille Y de l'image */
+		background-position-y: 256px;
+	}
+}
+
+/* STYLE AUTRES DIVS */
+.grid div {
+	width: 25px;
+	height: 25px;
+}
+.tireur {
+	background-image: url("./ressources/vaisseau.png");
+	/* pour mettre le vaisseau dans le bon sens de tir face aux ennemis */
+	transform: rotate(180deg);
+	background-position: center;
+	background-size: contain;
+}
+.alien {
+	background-image: url("./ressources/ennemies.png");
+	background-position: center;
+	background-size: contain;
+}
+.boom {
+	background-image: url("./ressources/shockwave.png");
+	background-position: center;
+	background-size: contain;
+}
+.explode {
+	background-image: url("./ressources/explode.png");
+	background-size: contain;
+}
+.laser {
+	background-color: orange;
+	border-radius: 9999px;
+	border-left: 10px solid #121012;
+	border-right: 10px solid #121012;
+}
+.new-game {
+	display: block;
+	background-color: crimson;
+	width: 150px;
+	padding: 1em;
+	margin: auto;
+	transition: opacity 0.4s;
+	border: 0;
+	outline: 0;
+	margin-top: 0.5em;
+	border-radius: 5px;
+	opacity: 0;
+}
+.new-game:hover {
+	cursor: pointer;
+}
