@@ -17,6 +17,7 @@ h3 {
 /* STYLE DIV GRID */
 .grid {
 	display: flex;
+	border-radius: 5px;
 	flex-wrap: wrap;
 	width: 505px;
 	height: 505px;
